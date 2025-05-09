@@ -5,6 +5,7 @@ import {
   Text,
   HStack,
   useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { PlusSquareIcon } from "@chakra-ui/icons";
@@ -14,7 +15,11 @@ import { LuSun } from "react-icons/lu";
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Container maxW="container.xl" px={4}>
+    <Container
+      maxW={"container.xl"}
+      px={4}
+     
+    >
       <Flex
         justifyContent={"space-between"}
         alignItems={"center"}
