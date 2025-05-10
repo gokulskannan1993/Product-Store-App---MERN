@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon api/server.js"
+    "dev": "cross-env NODE_ENV=development nodemon api/server.js",
+    "build": "npm install && npm install --prefix ui && npm run build --prefix ui",
+    "start": "cross-env NODE_ENV=production node api/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mongodb": "^6.16.0",
