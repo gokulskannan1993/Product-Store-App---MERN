@@ -7,7 +7,7 @@
 ## 🧪 .env Setup in the root folder
 
 ```
-PORT=500
+PORT=5000
 MONGO_URI=your_mongo_uri
 ```
 
