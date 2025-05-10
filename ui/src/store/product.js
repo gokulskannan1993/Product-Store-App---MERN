@@ -39,4 +39,21 @@ export const useProductStore = create((set) => ({
     }));
     return { success: true, message: data.message };
   },
+
+  updateProduct: async (pid, updatedProduct) => {
+    const res = await fetch(`/api/products/${pid}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedProduct),
+    });
+    const data = await res.json();
+    set((state) => ({
+      products: state.products.map((product) =>
+        product._id === pid ? { ...product, ...data.data } : product
+      ),
+    }));
+    return { success: true, message: data.message };
+  },
 }));
