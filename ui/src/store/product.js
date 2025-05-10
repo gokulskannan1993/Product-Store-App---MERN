@@ -30,6 +30,11 @@ export const useProductStore = create((set) => ({
     });
     const data = await res.json();
     set((state) => ({
+      // Remove the deleted product from the state
+      // Note: This is a shallow copy, so it won't trigger a re-render
+      // if the product is not in the state
+      // but it will remove it from the products array
+      // and the component will re-render with the new state
       products: state.products.filter((product) => product._id !== pid),
     }));
     return { success: true, message: data.message };
