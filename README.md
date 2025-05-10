@@ -1,6 +1,6 @@
 <h1 align="center">✨ Product Store App using MERN Stack ✨</h1>
 
-<h1 align="center"><a href="/" alt="link">Live Here</a></h1>
+<h1 align="center"><a href="https://product-store-app-mern.onrender.com" alt="link">Live Here</a></h1>
 
 
 
